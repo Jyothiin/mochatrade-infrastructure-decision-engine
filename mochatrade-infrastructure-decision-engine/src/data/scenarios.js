@@ -1,0 +1,246 @@
+/**
+ * @license
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+/**
+ * Scenario presets for the MochaTrade Infrastructure Decision Engine.
+ *
+ * Requirements:
+ * - Clear label on the illustrative MochaTrade scenario: "Illustrative scenario"
+ * - Assumptions are NOT presented as verified company facts
+ * - Presets provided:
+ *   1. Balanced (MochaTrade Baseline)
+ *   2. Moat First
+ *   3. Speed to Market
+ *   4. Cost Optimized
+ *   5. Maximum Control
+ *   6. Compliance First
+ */
+export const DEFAULT_STRATEGY_PROFILE = {
+  companyName: 'MochaTrade Financial Technologies',
+  strategyObjective: 'Establish institutional crypto & equities trading exchange with ultra-low latency execution and bank-grade regulatory compliance.',
+  planningHorizon: '18–24 Months',
+  riskAppetite: 'Moderate',
+  marketSpeedPriority: 6,
+  strategicMoatPriority: 8,
+  controlPriority: 8,
+  costSensitivity: 5,
+  complianceSensitivity: 7,
+};
+
+export const PLANNING_HORIZONS = [
+  '3–6 Months',
+  '6–12 Months',
+  '12–18 Months',
+  '18–24 Months',
+  '24+ Months',
+];
+
+export const RISK_APPETITES = [
+  { value: 'Conservative', label: 'Conservative (Risk-averse, audited rails)', desc: 'Prioritize proven bank rails, licensed vendors, and zero statutory liability.' },
+  { value: 'Moderate', label: 'Moderate (Balanced fintech approach)', desc: 'Calculated trade-offs between proprietary speed and vendor offloading.' },
+  { value: 'Aggressive', label: 'Aggressive (Speed & scale focused)', desc: 'Rapid market capture, high engineering velocity, and calculated regulatory risks.' },
+  { value: 'Frontier', label: 'Frontier (Deep tech / Maximum moat)', desc: 'Pure proprietary IP, custom algorithms, and complete roadmap sovereignty.' },
+];
+
+export const PRESET_SCENARIOS = [
+  {
+    id: 'mochatrade_baseline',
+    name: 'Balanced (MochaTrade Baseline)',
+    shortName: 'Balanced',
+    label: 'Illustrative scenario',
+    badge: 'Illustrative scenario / Editable assumption',
+    description: 'Round 1-aligned MochaTrade baseline: build the differentiated trading core, hybridize the wallet/ledger, and partner specialized KYC/AML and payment rails.',
+    isIllustrative: true,
+    profile: {
+      planningHorizon: '18–24 Months',
+      riskAppetite: 'Moderate',
+      marketSpeedPriority: 6,
+      strategicMoatPriority: 8,
+      controlPriority: 8,
+      costSensitivity: 5,
+      complianceSensitivity: 7,
+      strategyObjective: 'Establish institutional crypto & equities trading exchange with ultra-low latency execution and bank-grade regulatory compliance.',
+    },
+    weights: {
+      strategic_moat: 18,
+      control: 15,
+      differentiation: 14,
+      time_to_market: 13,
+      cost_efficiency: 10,
+      compliance_complexity: 10,
+      scalability: 10,
+      engineering_complexity: 10,
+    },
+    horizon: '18–24 Months',
+    capitalProfile: 'Series A / Institutional Growth ($10M–$25M)',
+    focus: 'Build the trading core; Hybridize the wallet & ledger; Partner KYC/AML and payment rails.',
+    disclaimer: 'Illustrative scenario based on initial architecture assumptions. Not verified company operational metrics.',
+  },
+  {
+    id: 'moat_first',
+    name: 'Moat First',
+    shortName: 'Moat First',
+    label: 'Illustrative scenario',
+    badge: 'Illustrative scenario / Editable assumption',
+    description: 'Technology-first posture prioritizing long-term enterprise valuation, proprietary intellectual property, and high barrier-to-entry infrastructure.',
+    isIllustrative: true,
+    profile: {
+      planningHorizon: '24+ Months',
+      riskAppetite: 'Frontier',
+      marketSpeedPriority: 3,
+      strategicMoatPriority: 10,
+      controlPriority: 9,
+      costSensitivity: 3,
+      complianceSensitivity: 6,
+      strategyObjective: 'Maximize proprietary intellectual property, custom matching algorithms, and enterprise valuation defensibility.',
+    },
+    weights: {
+      strategic_moat: 30,
+      control: 18,
+      differentiation: 20,
+      time_to_market: 5,
+      cost_efficiency: 5,
+      compliance_complexity: 7,
+      scalability: 11,
+      engineering_complexity: 4,
+    },
+    horizon: '24+ Months',
+    capitalProfile: 'Deep Tech / Growth Capital ($20M+)',
+    focus: 'Maximize proprietary IP across matching, order routing, and internal ledger.',
+    disclaimer: 'Illustrative scenario for evaluating high-differentiation strategic priorities.',
+  },
+  {
+    id: 'speed_to_market',
+    name: 'Speed to Market',
+    shortName: 'Speed to Market',
+    label: 'Illustrative scenario',
+    badge: 'Illustrative scenario / Editable assumption',
+    description: 'Rapid commercial release posture to capture early trading volume, validate customer demand, and minimize time-to-first-dollar.',
+    isIllustrative: true,
+    profile: {
+      planningHorizon: '3–6 Months',
+      riskAppetite: 'Aggressive',
+      marketSpeedPriority: 10,
+      strategicMoatPriority: 3,
+      controlPriority: 4,
+      costSensitivity: 8,
+      complianceSensitivity: 6,
+      strategyObjective: 'Achieve live trading transactions in record time by integrating pre-built turnkey vendor APIs and clearing rails.',
+    },
+    weights: {
+      strategic_moat: 6,
+      control: 8,
+      differentiation: 8,
+      time_to_market: 32,
+      cost_efficiency: 20,
+      compliance_complexity: 12,
+      scalability: 8,
+      engineering_complexity: 6,
+    },
+    horizon: '3–6 Months',
+    capitalProfile: 'Seed Stage ($1.5M–$3M)',
+    focus: 'Outsource commodity rails and pre-built services; launch minimum viable trading quickly.',
+    disclaimer: 'Illustrative scenario prioritizing speed over internal IP creation.',
+  },
+  {
+    id: 'cost_optimized',
+    name: 'Cost Optimized',
+    shortName: 'Cost Optimized',
+    label: 'Illustrative scenario',
+    badge: 'Illustrative scenario / Editable assumption',
+    description: 'Capital preservation posture favoring variable SaaS pay-per-transaction pricing over high fixed engineering payroll and infrastructure capex.',
+    isIllustrative: true,
+    profile: {
+      planningHorizon: '12–18 Months',
+      riskAppetite: 'Conservative',
+      marketSpeedPriority: 6,
+      strategicMoatPriority: 4,
+      controlPriority: 4,
+      costSensitivity: 10,
+      complianceSensitivity: 7,
+      strategyObjective: 'Minimize upfront capital expenditure and fixed payroll by adopting pay-as-you-grow utility SaaS pricing.',
+    },
+    weights: {
+      strategic_moat: 8,
+      control: 8,
+      differentiation: 8,
+      time_to_market: 16,
+      cost_efficiency: 30,
+      compliance_complexity: 12,
+      scalability: 8,
+      engineering_complexity: 10,
+    },
+    horizon: '12–18 Months',
+    capitalProfile: 'Capital Efficient / Lean Runway ($2M–$5M)',
+    focus: 'Leverage partner pricing tiers and minimize in-house dedicated operations teams.',
+    disclaimer: 'Illustrative scenario focused on OPEX efficiency over custom infrastructure ownership.',
+  },
+  {
+    id: 'maximum_control',
+    name: 'Maximum Control',
+    shortName: 'Maximum Control',
+    label: 'Illustrative scenario',
+    badge: 'Illustrative scenario / Editable assumption',
+    description: 'Zero third-party dependency posture. Prioritizes complete roadmap independence, tailored low-latency SLAs, and internal operational sovereignty.',
+    isIllustrative: true,
+    profile: {
+      planningHorizon: '18–24 Months',
+      riskAppetite: 'Moderate',
+      marketSpeedPriority: 4,
+      strategicMoatPriority: 8,
+      controlPriority: 10,
+      costSensitivity: 4,
+      complianceSensitivity: 6,
+      strategyObjective: 'Achieve complete technical and roadmap sovereignty with bespoke SLAs, custom telemetry, and zero vendor lock-in.',
+    },
+    weights: {
+      strategic_moat: 18,
+      control: 30,
+      differentiation: 14,
+      time_to_market: 6,
+      cost_efficiency: 6,
+      compliance_complexity: 8,
+      scalability: 12,
+      engineering_complexity: 6,
+    },
+    horizon: '18–24 Months',
+    capitalProfile: 'High Control / Specialized Engineering ($15M+)',
+    focus: 'Avoid external vendor outages, custom uptime SLAs, and owned telemetry pipelines.',
+    disclaimer: 'Illustrative scenario assuming strict engineering autonomy and SLA ownership.',
+  },
+  {
+    id: 'compliance_first',
+    name: 'Compliance First',
+    shortName: 'Compliance First',
+    label: 'Illustrative scenario',
+    badge: 'Illustrative scenario / Editable assumption',
+    description: 'Institutional-grade risk posture prioritizing statutory licenses, zero regulatory infractions, bank-grade audits, and proven legal safeguards.',
+    isIllustrative: true,
+    profile: {
+      planningHorizon: '24+ Months',
+      riskAppetite: 'Conservative',
+      marketSpeedPriority: 4,
+      strategicMoatPriority: 5,
+      controlPriority: 7,
+      costSensitivity: 4,
+      complianceSensitivity: 10,
+      strategyObjective: 'Prioritize institutional banking licenses, bulletproof audit trails, and certified AML/KYC partner rails.',
+    },
+    weights: {
+      strategic_moat: 10,
+      control: 15,
+      differentiation: 8,
+      time_to_market: 7,
+      cost_efficiency: 8,
+      compliance_complexity: 30,
+      scalability: 10,
+      engineering_complexity: 12,
+    },
+    horizon: '24–36 Months',
+    capitalProfile: 'Institutional / Bank Consortium ($25M+)',
+    focus: 'Certified custody partners, licensed KYC user agencies, and statutory compliance buffers.',
+    disclaimer: 'Illustrative scenario designed for institutional bank and sovereign licensing scrutiny.',
+  },
+];

@@ -1,0 +1,6 @@
+{
+  "name": "MochaTrade Infrastructure Decision Engine",
+  "description": "Strategic fintech decision-support platform for evaluating Build, Partner, or Hybrid infrastructure capabilities with weighted scoring, transparent reasoning, and phased roadmaps.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
